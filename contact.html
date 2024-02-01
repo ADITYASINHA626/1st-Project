@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-image: linear-gradient(#051937, #05162f);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      border: none;
+      border-bottom: 2px solid rgb(128, 126, 126);
+      background: transparent;
+      outline: none;
+      width: 100%;
+      text-transform: capitalize;
+      padding: 1rem 0.4rem;
+    }
+
+    .aside {
+      background-image: linear-gradient(#112549, #01409f);
+    }
+
+    /* Floating label styles */
+    .form-floating {
+      position: relative;
+      
+    }
+
+    .form-floating label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      transition: 0.2s ease-out;
+      color: #606265;
+    }
+
+    .form-floating input:focus + label,
+    .form-floating input:not(:placeholder-shown) + label,
+    .form-floating textarea:focus + label,
+    .form-floating textarea:not(:placeholder-shown) + label {
+      transform: translateY(-40%)translateX(-10%) ;
+      font-size: 1rem;
+      color: #606265;
+      /* color: rgb(128, 126, 126); */
+    }
+  </style>
+</head>
+
+
+<body translate="no" style="margin-top:1%;">
+  <div class="container">
+    <div class="bg-dark">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 p-5 bg-white rounded-6">
+          <div class="d-flex mb-3 flex-column">
+            <h1 class="h5 text-capitalize my-4" style="text-align: center;">Fill out the form</h1> <br> <br> <br>
+            <form class="form-floating row mb-3">
+              <div class="col-md-6 p-3">
+                <div class="form-floating">
+                  <input required placeholder="" type="text" name="" id="" />
+                  <label for="">First Name</label>
+                </div>
+              </div>
+              <div class="col-md-6 p-3">
+                <div class="form-floating">
+                  <input required placeholder="" type="text" name="" id="" />
+                  <label for="">Last Name</label>
+                </div>
+              </div>
+              <div class="col-md-6 p-3">
+                <div class="form-floating">
+                  <input required placeholder="" type="email" name="" id="" />
+                  <label for="">E-mail</label>
+                </div>
+              </div>
+              <div class="col-md-6 p-3">
+                <div class="form-floating">
+                  <input required placeholder="" type="tel" name="" id="a4" />
+                  <label for="" >Phone</label>
+                  <label for="" id="b4"></label>
+
+                </div>
+              </div> 
+              
+              <div class="col-md"> <br> <br> 
+                <div class="form-floating">  
+                  <textarea required name="" placeholder="" id="" cols="20" rows="1" style="resize: none;"></textarea>
+                  <label for="">Write your message</label>
+                </div>
+              </div>
+              <div class="text-end mt-4">
+                <input class="btn px-4 py-3 btn-outline-dark" type="submit" value="Send Message" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 text-white aside px-4 py-5">
+          <div class="mb-5">
+            <h1 class="h3">Contact Information</h1>
+            <p class="opacity-50">
+              <small>
+                Fill out the form
+              </small>
+            </p>
+          </div>
+          <ul class="m-0 p-0">
+            <li class="d-flex align-items-center mb-4">
+              <span class="opacity-50 d-flex align-items-center me-3 fs-2">
+                <ion-icon name="call"></ion-icon>
+              </span>
+              <span>+91 9386087029 <br></span>
+            </li>
+            <li class="d-flex align-items-center mb-4">
+              <span class="opacity-50 d-flex align-items-center me-3 fs-2">
+                <ion-icon name="mail"></ion-icon>
+              </span>
+              <span><a href="mailto:info@wtca.edu.in" style="color: #ffff;">info@wtca.edu.in</a></span>
+            </li>
+            <li class="d-flex align-items-center mb-4">
+              <span class="opacity-50 d-flex align-items-center me-3 fs-2">
+                <ion-icon name="pin"></ion-icon>
+              </span>
+              <span>7A/73,S/F Plot No.3 & 4, <br>Pvt Office 204<br> Main Road Guru Nanak Pura, Delhi -110092</span>
+            </li>
+          </ul>
+          <div class="text-muted text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5667101251024!2d85.14273627490421!3d25.61931041447514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed5859d3fa3315%3A0x1d71d845176f4280!2sGandhi%20Maidan%20Rd%2C%20Dujra%20Diara%2C%20Patna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1690274099431!5m2!1sen!2sin" width="350" height="266" style="border:0; border-radius: 8px;position: relative;right: 0.4rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js'></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $("#a4").keypress(function (x) {
+    $('.clear').text('');
+
+    // Count the number of dots in the input
+    var inputText = x.target.value;
+    var dotCount = (inputText.match(/\./g) || []).length;
+
+    if (x.which == 32 && x.target.selectionStart == 0) {
+        return false;
+    } else if (!(x.which >= 48 && x.which <= 57 ||  // Numbers 0-9
+                 x.which == 32 ||
+                 x.which == 46 ||                   // Dot
+                 x.which == 40 ||                   // '('
+                 x.which == 41)) {                  // ')'
+        
+        $("#b4").html('Only numbers allowed*');
+        $("#b4").css('color', 'red');
+        $("#b4").focusin('');
+        return false;
+    } else if (x.which == 46 && dotCount >= 1) {
+        // Prevent additional dots if there's already one
+        return false;
+    } else {
+        $("#b4").html('');
+    }
+});
+  </script>
+</body>
+
+</html>
