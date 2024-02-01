@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/2de2277cd8.js" crossorigin="anonymous"></script>
+    <title>Gallery</title>
+</head>
+<style>
+     .gallery {
+      position: relative;
+      /* min-height: 100vw; */
+      /* background: #ddd; */
+      height: 100%;
+      background: linear-gradient(135deg, #990000 10%, #674fecab 100%);
+      /* Add a negative margin-top value to remove spacing */
+      /* margin-top: 5rem; */
+
+
+
+    }
+
+    .gallery h1 {
+      font-size: 48px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: normal;
+      padding: 15px;
+      color: #ffffff;
+      text-align: center;
+      text-transform: capitalize;
+      /* font-family: fantasy; */
+      cursor: default;
+    }
+
+    .gallery .img-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    .gallery .img-gallery .img {
+      height: 250px;
+      width: 400px;
+      border: 3px solid black;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 19px;
+    }
+
+    .gallery .img-gallery .img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: .2s linear;
+    }
+
+    .gallery .img-gallery .img:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery .pop-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .9);
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      display: none;
+    }
+
+    .gallery .pop-image span {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 60px;
+      font-weight: bolder;
+      color: #fff;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .gallery .pop-image img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 5px solid #fff;
+      border-radius: 5px;
+      max-width: 90%;
+      max-height: 90%;
+    }
+</style>
+<body>
+    <div class="gallery">
+        <h1>Image Gallery</h1>
+        <div class="img-gallery">
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="premium_photo-1676999224292-dda90b36cc51.avif">
+              <img src="premium_photo-1676999224292-dda90b36cc51.avif" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+          <div class="img">
+            <a data-fancybox="gallery" href="wizardtechfront.jpg">
+              <img src="wizardtechfront.jpg" alt="">
+            </a>
+          </div>
+        </div>
+    
+      </div>
+      <div class="pop-image">
+        <!-- <span>&times;</span> -->
+      </div>
+    
+      <script>
+        $(document).ready(function () {
+          $(".img-gallery .img a").fancybox({
+            infobar: false,
+            buttons: ["close"],
+          });
+    
+          $(".pop-image span").click(function () {
+            $(".pop-image").hide();
+          });
+        });
+      </script>
+</body>
+</html>
