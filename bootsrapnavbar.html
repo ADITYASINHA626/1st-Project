@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Navbar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/2de2277cd8.js" crossorigin="anonymous"></script>
+
+
+  <style>
+    
+    .nav-bar ul li a:hover {
+      color: #090909;
+      background: #fefefe;
+    }
+
+    .nav-bar ul li a.active {
+      color: #040404;
+      background: #fefefe;
+    }
+
+    /* Show dropdown menu on hover */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+
+
+
+
+
+    .navbar-inverse.top-navbar {
+
+      background-color: #087897;
+      border: none;
+      border-radius: 0;
+      width: 100%;
+      
+
+    }
+
+    .navbar-inverse.second-navbar {
+      border-radius: 0;
+      background-color: #03396e;
+      font-weight: bolder;
+      color: #ffffff;
+      border: none;
+      font-size: small;
+      letter-spacing: 2px;
+      
+
+    }
+
+    /* Animation and hover effect for dropdown menu */
+    .dropdown-menu {
+      animation: fadeInUp 0.3s ease-in-out;
+
+      font-size: larger;
+      /* border-radius: 3px; */
+
+    }
+
+    .dropdown-menu li:hover {
+      background-color: #ffffff;
+      max-height: 300px;
+      /* border-radius: 4px; */
+      padding: 1rem;
+    }
+
+    .dropdown-menu li:hover a {
+      color: #f5f1f1;
+      background-color: #047a6f;
+      /* padding: 1rem; */
+      /* font-size: large; */
+     
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+      color: #ffffff;
+    }
+
+ 
+
+    #c2 {
+      background: linear-gradient(135deg, #1b5071 5%, #603986 100%);
+      text-align: center;
+      padding: 75px;
+    }
+
+    label {
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .col-sm-4 {
+      text-align: center;
+    }
+
+    i {
+      transform: rotateY(0deg) rotate(-30deg);
+    }
+
+
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+
+    /* Animation keyframes */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0.3s);
+      }
+    }
+
+    /* Remove spacing between the two navbars */
+    .navbar+.navbar {
+      margin-top: 7%;
+    }
+
+    /* Remove spacing between navbar and container */
+    .navbar {
+      margin-bottom: 0%;
+    }
+
+
+    
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse top-navbar ">
+    <div class="container-fluid" style="width: 100%;">
+      <div class="navbar-header">
+        <img src="wizardtech-logo.png" style="position: relative; width: 30rem;padding: 0.8rem;background: #f5f1f1d7;border-radius: 10px;" alt="">
+        
+
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="row">
+          <div class="col-xs-2">
+          </div>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" style="font-size: 17px;"><span class="glyphicon glyphicon-user"
+                style="font-size: 25px;"></span> Sign Up</a></li>
+          <li><a href="#" style="font-size: 17px;"><span class="glyphicon glyphicon-log-in"
+                style="font-size: 25px;"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav>
+
+
+    <nav class="navbar navbar-inverse second-navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar2">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Page 1-1</a></li>
+                <li><a href="#">Page 1-2</a></li>
+                <li><a href="#">Page 1-3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">ABOUT US <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li> <a href="#">Company Profile</a> </li>
+                <li> <a href="#">Chairman's message</a></li>
+                <li> <a href="#">Mission & Vision</a> </li>
+                <li> <a href="#">Certificate of incorporation</a> </li>
+                <li> <a href="#">ISO 9001:2015 Certificate</a> </li>
+                <li> <a href="#">Corporate Member</a> </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown 2 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown 2-1</a></li>
+                <li><a href="#">Dropdown 2-2</a></li>
+                <li><a href="#">Dropdown 2-3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown 3 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown 3-1</a></li>
+                <li><a href="#">Dropdown 3-2</a></li>
+                <li><a href="#">Dropdown 3-3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown 4 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown 4-1</a></li>
+                <li><a href="#">Dropdown 4-2</a></li>
+                <li><a href="#">Dropdown 4-3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown 5 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown 5-1</a></li>
+                <li><a href="#">Dropdown 5-2</a></li>
+                <li><a href="#">Dropdown 5-3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown 4 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown 4-1</a></li>
+                <li><a href="#">Dropdown 4-2</a></li>
+                <li><a href="#">Dropdown 4-3</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown 4 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown 4-1</a></li>
+                <li><a href="#">Dropdown 4-2</a></li>
+                <li><a href="#">Dropdown 4-3</a></li>
+              </ul>
+            </li>
+        </div>
+      </div>
+    </nav>
+
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam corrupti praesentium eos ea accusamus cum, consequuntur autem. Rerum aut, doloribus laboriosam voluptas impedit perferendis labore. Consequuntur, vero molestiae praesentium cupiditate consectetur molestias deleniti veniam sunt dolore, atque quam ullam! Quidem, voluptate ratione. Consequuntur neque consequatur sequi magnam voluptas obcaecati, harum suscipit quo ipsum sed doloremque distinctio quibusdam recusandae blanditiis pariatur eius beatae quod nulla voluptates. Id suscipit aperiam iure dolor ratione? Sed nihil dicta ullam! Temporibus minima deserunt pariatur quae fugit, ducimus, sapiente officia a, magni asperiores dolores repellat quia ea aliquam. Sint totam quasi nihil, repudiandae iusto esse modi aspernatur eaque! Aperiam quisquam itaque quidem repellat delectus culpa voluptate omnis, et, harum illo deserunt aspernatur! Inventore ut, nostrum suscipit ex perspiciatis nihil maxime voluptas vel optio iure aperiam. Ex doloremque sint et, dolorum obcaecati atque porro vel nulla saepe dolor quisquam error cupiditate dolore incidunt? Voluptatem voluptatum consectetur maxime, similique dolore sed laborum voluptates exercitationem quisquam dicta, ea ex vel voluptas. Ducimus nobis, iusto odio corrupti atque reprehenderit, at maxime ea neque veniam quos ut tempora? Voluptate fugit corporis adipisci magnam aspernatur iusto eaque pariatur doloribus voluptates quidem culpa officiis veritatis facere error reiciendis reprehenderit dignissimos accusantium itaque praesentium quae nisi, exercitationem porro, aliquid quaerat! Neque, eos quae accusamus ducimus perspiciatis illo quidem odit temporibus sequi aut, adipisci aperiam sunt quo ipsam cupiditate. Autem quod iusto doloremque cupiditate vitae, animi vel tempora nobis hic reprehenderit dignissimos est eligendi esse voluptatibus, laboriosam excepturi porro et adipisci iste soluta mollitia nisi. Reiciendis assumenda eos quas asperiores, labore quae impedit magnam quaerat voluptatum dolore quasi quisquam eligendi odio repudiandae nisi dolores nihil delectus quod eaque laborum. Facilis, rerum quis perferendis magni veritatis illum dignissimos soluta sunt eius iure maiores eos adipisci ratione? Laudantium soluta cumque, vitae asperiores maxime sit corporis consequuntur ullam, unde laborum assumenda labore architecto quia sapiente tempore dolorem beatae quibusdam. Sed porro quidem vel, iste adipisci sequi illo fuga necessitatibus soluta quaerat, tempora culpa perferendis placeat ut, non eaque veritatis a earum dolor ex eum mollitia nulla officia. Possimus dolorem ratione error unde harum minus facilis molestias minima laudantium exercitationem, eum, nemo enim vel! Saepe quibusdam illo magni nisi doloribus, velit adipisci, illum dolorum accusamus, nihil ad inventore dolorem odio nemo officiis itaque perspiciatis veritatis animi dolor nulla. Numquam vel nisi rerum corrupti fugit enim, consequatur facilis animi est nesciunt molestiae id aliquam voluptas reprehenderit alias eos labore cupiditate!</div>
+
+
+
+
+    <div>
+      <div class="container-fluid" id="c2">
+        <br>
+        <div class="row col-sm-12">
+          <div class="col-sm-4">
+            <label for="textinfo">registered office</label>
+            <label for="textinfo">wizard-tech computer academy pvt.ltd.</label>
+            <label for="textinfo" style="color: white;">
+              7A/73,S/F Plot No.3 & 4, Pvt Office 204<br> Main Road Guru Nanak Pura, Delhi -110092 <br>
+              <i class="fas fa-phone-volume"></i> +91 9386087029
+              <br>
+              <i class="fas fa-envelope"></i> info@wtca.edu.in
+              <br> <br> <br>
+            </label>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="textinfo">Corporate office</label>
+            <label for="textinfo">wizard-tech computer academy pvt.ltd.</label>
+            <label for="textinfo" style="color: white;">
+              Salempur, Lah Bazar, Chapra - 841301 <br>
+              <i class="fas fa-phone-volume"></i> +91 9572095268
+              <br>
+              <i class="fas fa-envelope"></i> info@wtca.edu.in
+              <br> <br> <br>
+            </label>
+          </div>
+
+          <div class="col-sm-4">
+            <label for="textinfo">regional office</label> <br>
+            <label for="textinfo">wizard-tech computer academy pvt.ltd.</label>
+            <label for="textinfo" style="color: white;">
+              3rd Floor, Pal Bhawan, Opp. Pillar No. 4,<br> Bailey Road Patna-800014<br>
+              <i class="fas fa-phone-volume"></i> +91 9572095268
+              <br>
+              <i class="fas fa-envelope"></i> info@wtca.edu.in
+              <br>
+              <br>
+            </label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</body>
+
+</html>
